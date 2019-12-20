@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,i;
+    cout<<"enter a number"<<endl;
+    cin>>x;
+    if(x==1)
+    {
+        cout<<"number is not prime  "<<endl;
+    }
+    else if (x==2)
+    {
+        cout<<"number is prime"<<endl;
+        
+    }
+    else
+    {
+    for(i=2;i<=x/2;i++)
+     {
+       if(x%i==0)
+         {
+           cout<<"Not prime num"<<endl;
+           break;
+         }
+         
+     }
+     if(i>=x/2)
+     {
+     cout<<"prime number"<<endl;
+     }
+    } 
+}
+     
+
+
+
