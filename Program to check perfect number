@@ -1,0 +1,28 @@
+//Program to find the perfect number
+// If Sum of the divisors of a number is equal to the number itself then it is called as perfect number 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int sum;//variable that store the sum of divisors
+    int n; //taken a number 
+    cin>>n;
+    
+    for(int i=1;i<n;i++) // calculating the divisors 
+    {
+       if(n%i==0)
+       {
+           cout<<"Divisors are: "<<i<<" "<<endl;
+           sum = sum + i;
+       }
+    }   
+    
+    if(sum == n)
+    {
+        cout<<"Number is a perfect number"<<endl;
+    }
+    else 
+        cout<<"Its not a perfect Number"<<endl;
+}
