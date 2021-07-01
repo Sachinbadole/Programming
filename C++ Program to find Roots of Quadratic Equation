@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    //declaring the variables 
+    //Variable name are associated with the quadratic equation of the form ax^2 + bx + c 
+    // where a,b,c are user input and d will be the discriminant 
+    
+    float a,b,c;
+    float d;
+    float x1=0,x2=0;
+    float rl,ign;
+    
+    //taking the input 
+    cin>>a>>b>>c;
+    
+    cout<<"Equation :"<<a<<"x^2"<<" "<<"+"<<"( "<<b<<")"<<"x"<<"+"<<"("<<c<<")"<<endl;
+    
+    //calculating the discriminant 
+    d = b*b - 4*a*c;
+    //cout<<d<<endl;
+    
+    if(d>0)
+    {
+        //roots of the the Equation are as follows.
+        x1 = ((-b)+sqrt(d))/2*a;
+        x2 = ((-b)-sqrt(d))/2*a;
+        cout<<"Roots of equation are: "<<x1<<" & "<<x2<<endl;
+    }
+    else if(d<0)
+    {
+        //In this case the roots of eqn are imaginary because the discriminant is negative. 
+        //Root are of the format of real +/- i(imaginary) where i is iota whose value is √−1.
+    
+        rl = (-b)/2*a;
+        ign = sqrt(-d)/2*a;
+        cout<<"1st Root of the equation is: "<<rl<<" + "<<ign<<"i"<<endl;
+        cout<<"2nd root of the quation is: "<<rl<<" - "<<ign<<"i"<<endl;
+    }
+    
+    else{
+        //In this case discriminant is zero
+        // so both the roots are same 
+        //value of the roots are determind by (-b)/2a.
+        x1 = (-b)/2*a;
+        cout<<"Both the roots are same: "<<x1<<endl;
+    }
+    
+    return 0;
+}
