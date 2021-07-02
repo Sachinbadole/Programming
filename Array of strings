@@ -1,0 +1,42 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+ 
+int main() 
+{ 
+  
+    int n;
+    cin>>n;
+    string arr[n]; 
+    //enter string elements 
+    for(int i = 0; i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    
+    //entered string 
+    cout<<"
+Entered String array:
+";
+    for (int i = 0; i< n; i++) 
+        cout << arr[i] << " "; 
+        
+    //reverse array using while loop
+    string count;
+    int i=0, j = n-1;
+    while (i<j)
+	{
+	    //swapping the elements to reverse the array.
+		count = arr[i];
+		arr[i] = arr[j];
+		arr[j] = count;
+		i++;
+		j--;
+	}
+    
+    cout<<"
+Reversed array:
+";
+    for (int i = 0; i<5; i++) 
+        cout << arr[i] << " "; 
+    
+} 
