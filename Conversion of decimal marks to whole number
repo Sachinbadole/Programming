@@ -1,0 +1,32 @@
+//There is class of 30 students whose marks are in decimal form. Downstream system will accept only whole numbers. 
+//Write the program to round-off of the marks to nearest whole number. 
+//Display the Original marks and converted whole numbers.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+  float arr[30]; // Marks of 30 student saved in and array 
+  int temp = 0;
+  int j;
+  //Collecting marks in the the system 
+  for (int i=0; i<30; i++)
+    {
+      //Taking the user input 
+      cin >> arr[i];
+      //CONVERTING THE DECIMAL INPUT INTO THE NEAREST WHOLE NUMBER 
+      temp = round(arr[i]);//ROUND FUNCTION is a built in function which present in the <cmath> header file.
+      arr[i] = temp;
+    }
+    cout<<"Converted Marks are as follows: "; 
+  for (int i=0; i<30;i++)
+    {
+      //Display the marks of the students
+      cout<<arr[i] << " ";
+    }
+  return 0;
+
+
+}
